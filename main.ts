@@ -17,4 +17,9 @@ basic.forever(function () {
         sprite1.change(LedSpriteProperty.Y, -1)
         basic.pause(100)
     }
+    if (sprite1.isTouching(sprite2)) {
+        music.playTone(262, music.beat(BeatFraction.Whole))
+        basic.showIcon(IconNames.Happy)
+        game.gameOver()
+    }
 })
